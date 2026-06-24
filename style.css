@@ -111,7 +111,7 @@ nav ul li a:hover{
 .box{
     width:300px;
     min-height:220px;
-    background:rgb(83, 17, 113);
+    background:rgb(171, 148, 183);
     border:none;
     border-radius:12px;
     padding:20px;
@@ -129,6 +129,186 @@ nav ul li a:hover{
     height:180px;
     object-fit:cover;
     border-radius:8px;
+}
+.buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    margin:30px 0;
+}
+
+.button input{
+    padding:12px 25px;
+    border:none;
+    border-radius:5px;
+    background-color:#87ca60;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.button input:hover{
+    background-color:#501f08;
+    transform:translateY(-3px);
+}
+.collaps{
+    max-width: 600px;
+    margin: auto;
+}
+
+details{
+    background: #4bc4f4;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+summary{
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    list-style: none;
+}
+
+summary:hover{
+    background: #0056b3;
+}
+
+.details summary ul{
+    padding: 15px 40px;
+    background: rgb(223, 149, 216);
+}
+
+li{
+    padding: 6px 0;
+    font-size: 16px;
+    color: #333;
+}
+/* =========================
+   Tablet (768px and below)
+========================= */
+@media (max-width: 768px){
+
+    header{
+        flex-direction:column;
+        padding:15px 20px;
+        gap:15px;
+    }
+
+    nav ul{
+        gap:30px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .slider{
+        height:250px;
+    }
+
+    .slide-content h2{
+        font-size:30px;
+    }
+
+    .content{
+        gap:20px;
+        padding:30px 15px;
+    }
+
+    .box{
+        width:100%;
+        max-width:350px;
+    }
+
+    .buttons{
+        gap:20px;
+        flex-wrap:wrap;
+    }
+
+    .collaps{
+        width:90%;
+    }
+}
+
+/* =========================
+   Mobile (480px and below)
+========================= */
+@media (max-width: 480px){
+
+    header{
+        padding:10px;
+    }
+
+    .logo img{
+        width:50px;
+        height:50px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    nav ul li a{
+        font-size:16px;
+    }
+
+    .slider{
+        height:200px;
+    }
+
+    .slide-content h2{
+        font-size:22px;
+        padding:0 10px;
+    }
+
+    .arrow{
+        padding:8px 12px;
+        font-size:14px;
+    }
+
+    .content{
+        padding:20px 10px;
+    }
+
+    .box{
+        width:100%;
+    }
+
+    .box img{
+        height:160px;
+    }
+
+    .buttons{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .button input{
+        width:200px;
+    }
+
+    summary{
+        font-size:16px;
+        padding:12px 15px;
+    }
+
+    li{
+        font-size:14px;
+    }
+
+    footer{
+        font-size:14px;
+        padding:15px;
+    }
 }
 footer{
     background:#981818;

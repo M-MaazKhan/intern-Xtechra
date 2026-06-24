@@ -51,6 +51,37 @@ function resetAutoSlide() {
     clearInterval(autoSlide);
     startAutoSlide();
 }
+function myFunction(event) {
 
+    let category = event.target.value.toLowerCase();
+    let boxes = document.querySelectorAll(".box");
+
+    for (let i = 0; i < boxes.length; i++) {
+
+        if (category === "all") {
+            boxes[i].style.display = "block";
+        }
+        else if (boxes[i].id === category) {
+            boxes[i].style.display = "block";
+        }
+        else {
+            boxes[i].style.display = "none";
+        }
+
+    }
+}
+const details = document.querySelectorAll("details");
+
+details.forEach((item) => {
+    item.addEventListener("toggle", () => {
+        if (item.open) {
+            details.forEach((other) => {
+                if (other !== item) {
+                    other.open = false;
+                }
+            });
+        }
+    });
+});
 showSlide(currentSlide);
 startAutoSlide();
